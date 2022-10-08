@@ -1,0 +1,21 @@
+// import 'abstracts' styles
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// import 'core' styles
+@import "core/base";
+
+// import 'Components' styles
+@import "components/page-content";
+@import "Components/page-content__left";
+@import "Components/page-content__middle";
+@import "Components/page-content__right";
+
+// import 'layout' styles
+@import "layout/navigation";
+@import "layout/facebook-sponsors";
+@import "layout/facebook-contacts";
+@import "layout/stories";
+@import "layout/create-post";
+@import "layout/add-friends";
+@import "layout/news-feed";

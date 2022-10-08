@@ -1,0 +1,59 @@
+.add-friends {
+    @include component-box(10, 15, 10);
+
+    &__title {
+        padding: to-rem(20);
+        color: $primary-text-color;
+        font-size: 1.0625rem;
+        line-height: 1.1765;
+        font-weight: 600;
+    }
+
+    &__container {
+        @include flex(space-around, center);
+
+        &__item {
+            width: to-rem(160);
+            flex-direction: column;
+            padding-bottom: to-rem(20);
+            margin: to-rem(20);
+            box-shadow: $shadow;
+            border-radius: to-rem(8);
+            -webkit-border-radius: to-rem(8);
+            -moz-border-radius: to-rem(8);
+            -ms-border-radius: to-rem(8);
+            -o-border-radius: to-rem(8);
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &--text {
+                font-size: 1.0625rem;
+                font-weight: 600;
+                color: $secondary-text-color;
+                padding: to-rem(12) to-rem(8);
+            }
+
+            &--btn {
+                @include flex(center, center);
+
+                padding: to-rem(12);
+                margin: 12px;
+                margin-bottom: 0;
+                background-color: rgba(45, 136, 255, 0.2);
+                font-size: .9375rem;
+                color: #2D88FF;
+                border-radius: to-rem(8);
+                -webkit-border-radius: to-rem(8);
+                -moz-border-radius: to-rem(8);
+                -ms-border-radius: to-rem(8);
+                -o-border-radius: to-rem(8);
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@mixin flex($justify: center, $align: center, $gap: 10) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap: to-rem($gap);
+}
+
+@mixin round-box($size, $bg-color) {
+    border: none;
+    height: to-rem($size);
+    border-radius: to-rem(calc($size / 2));
+    -webkit-border-radius: to-rem(calc($size / 2));
+    -moz-border-radius: to-rem(calc($size / 2));
+    -ms-border-radius: to-rem(calc($size / 2));
+    -o-border-radius: to-rem(calc($size / 2));
+    padding: to-rem(calc($size / 2));
+    background-color: $bg-color;
+}
+
+@mixin img-rounded($size) {
+    width: to-rem($size);
+    height: to-rem($size);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@mixin circle-icon($size) {
+    width: to-rem($size);
+    height: to-rem($size);
+    border-radius: 50%;
+}
+
+@mixin component-box($margin: unset, $padding: unset, $border-radius: unset) {
+    background-color: $primary-box;
+    margin: to-rem($margin);
+    padding: to-rem($padding);
+    border-radius: to-rem($border-radius);
+    box-shadow: $shadow;
+    -webkit-border-radius: to-rem($border-radius);
+    -moz-border-radius: to-rem($border-radius);
+    -ms-border-radius: to-rem($border-radius);
+    -o-border-radius: to-rem($border-radius);
+}
+
+%content-component {
+    @include flex(left, center);
+
+    gap: to-rem(5);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: to-rem(5) 0;
+}
+
+$media: (sm: 640px, md: 768px, lg: 1024px, xl: 1280px, 2xl: 1536px, 3xl: 1920px);
+
+@mixin media-breakpoint($breakpoint) {
+    @each $breakpoints, $size in $media {
+        @if $breakpoint == $breakpoints {
+            @media screen and (max-width: $size) {
+                @content;
+            }
+        }
+    }
+}

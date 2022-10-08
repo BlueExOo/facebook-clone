@@ -1,0 +1,32 @@
+.facebook-shortcuts {
+    &__shortcut {
+        @extend %content-component;
+
+        color: $secondary-text-color;
+        gap: to-rem(10);
+        padding: to-rem(10) 0;
+
+        img {
+            @include img-rounded(40);
+        }
+
+        div {
+            @include flex(center, center);
+
+            background-color: #3a3b3d;
+            width: to-rem(40);
+            height: to-rem(40);
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+
+            svg {
+                width: to-rem(20);
+                height: to-rem(20);
+                color: $secondary-text-color;
+            }
+        }
+    }
+}

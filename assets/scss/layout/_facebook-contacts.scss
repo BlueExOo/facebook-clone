@@ -1,0 +1,20 @@
+.facebook-contacts {
+    &__item {
+        @extend %content-component;
+
+        padding-top: to-rem(20);
+        gap: to-rem(20);
+
+        img {
+            @include img-rounded(36);
+        }
+    }
+
+    &__text {
+        font-size: .9375rem;
+        line-height: 1.3333;
+        font-weight: 500;
+        color: $secondary-text-color;
+        max-width: 100%;
+    }
+}

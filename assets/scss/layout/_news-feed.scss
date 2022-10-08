@@ -1,0 +1,104 @@
+.news-feed {
+    @include component-box(10, 15, 10);
+
+    margin-top: to-rem(20);
+
+    &__header {
+        @include flex(space-between, center);
+
+        > div:nth-child(2) {
+            flex: 1;
+        }
+
+        img {
+            @include img-rounded(40);
+        }
+
+        &__post-meta {
+            &__name {
+                color: rgb(255, 255, 255);
+            }
+
+            &__info {
+                font-size: .8125rem;
+                font-weight: 400;
+                color: $primary-text-color;
+            }
+        }
+
+        &__options {
+            color: $primary-text-color;
+            position: relative;
+            top: to-rem(-10);
+            line-height: 1.3333;
+
+            svg {
+                width: to-rem(20);
+                height: to-rem(20);
+            }
+        }
+    }
+
+    &__feed {
+        &--text, &--img {
+            margin-top: $primary-margin;
+        }
+
+        &--img {
+            border-radius: to-rem(8);
+            -webkit-border-radius: to-rem(8);
+            -moz-border-radius: to-rem(8);
+            -ms-border-radius: to-rem(8);
+            -o-border-radius: to-rem(8);
+        }
+
+        &--feed {
+            font-size: .9375rem;
+            color: $secondary-text-color;
+            font-weight: 400;
+            line-height: 1.3333;
+            padding-top: $primary-padding;
+            padding-bottom: $primary-padding;
+        }
+    }
+
+    &__footer {
+        @include flex(space-between, center);
+
+        margin-top: $primary-margin;
+
+        &--reactions {
+            img {
+                width: to-rem(18);
+                height: to-rem(18);
+                aspect-ratio: auto 18 / 18;
+            }
+        }
+
+        &--comments {
+            color: $primary-text-color;
+        }
+
+        &--share {
+            color: $primary-text-color;
+        }
+    }
+
+    &__items {
+        @include flex(space-around, center);
+
+        border-top: 1px solid #393a3c;
+        margin-top: $primary-margin;
+        padding-top: to-rem(10);
+
+        &--item {
+            color: #b0b3b8;
+        }
+    }
+
+    &__comment-box {
+        border-top: 1px solid #393a3c;
+        margin-top: $primary-margin;
+        padding-top: to-rem(10);
+    }
+}

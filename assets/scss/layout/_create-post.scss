@@ -1,0 +1,40 @@
+.create-post {
+    @include component-box(10, 15, 10);
+
+    background-color: $primary-box;
+
+    &__img {
+        @include img-rounded(40);
+    }
+
+    &__buttons {
+        @include flex(space-around, center);
+
+        padding-top: $primary-padding;
+        margin-top: $primary-margin;
+        border-top: 1px solid #393a3c;
+
+        &--item {
+            @include flex(space-between, center);
+
+            font-size: to-rem(18);
+            cursor: pointer;
+
+            span {
+                color: #acb6c0;
+            }
+
+            &:nth-child(1) svg {
+                color: #f3425f;
+            }
+
+            &:nth-child(2) svg {
+                color: #45bd62;
+            }
+
+            &:nth-child(3) svg {
+                color: #f7b928;
+            }
+        }
+    }
+}

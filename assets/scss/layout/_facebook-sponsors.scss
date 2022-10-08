@@ -1,0 +1,28 @@
+.facebook-sponsors {
+    &__item {
+        @include flex(space-between, flex-start);
+
+        padding: to-rem(20) 0;
+        margin: to-rem(10);
+
+        img {
+            width: 40%;
+            align-self: center;
+            border-radius: to-rem(5);
+            -webkit-border-radius: to-rem(5);
+            -moz-border-radius: to-rem(5);
+            -ms-border-radius: to-rem(5);
+            -o-border-radius: to-rem(5);
+        }
+    }
+
+    &__text {
+        font-size: .9375rem;
+        text-align: left;
+        color: $secondary-text-color;
+        font-weight: 500;
+        word-wrap: break-word;
+        word-break: break-word;
+        align-self: center;
+    }
+}
